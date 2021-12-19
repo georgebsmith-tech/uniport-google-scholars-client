@@ -27,7 +27,7 @@ export default function login() {
             maxWidth: 700,
             width: 600,
             borderRadius: 5,
-            boxShadow: "2px 6px 3px #fff",
+            boxShadow: "10px 6px 3px #fff",
           }}
         >
           <div>

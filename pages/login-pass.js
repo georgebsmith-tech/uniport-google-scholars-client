@@ -35,7 +35,7 @@ export default function login() {
             <p>To access account</p>
             <div>
               <input
-                placeholder="Email address or Phone number"
+                placeholder="Password"
                 style={{
                   padding: 10,
                   width: "100%",
@@ -49,7 +49,7 @@ export default function login() {
               />
             </div>
             <button
-              onClick={() => router.push("/login-pass")}
+              onClick={() => router.push("/profile")}
               style={{
                 padding: 10,
                 width: "100%",
@@ -63,7 +63,7 @@ export default function login() {
                 cursor: "pointer",
               }}
             >
-              NEXT
+              LOGIN
             </button>
             <div
               style={{
