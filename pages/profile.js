@@ -186,6 +186,27 @@ export default function login() {
           exit={{ scale: 0 }}
           style={{ backgroundColor: "#fff", padding: 20, borderRadius: 5 }}
         >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              marginTop: 15,
+            }}
+          >
+            <ul>
+              <li>h-index: 20</li>
+              <li>i10-index: 345</li>
+              <li>Total Publications: 2342</li>
+              <li>Total Authors: 120</li>
+              <li>Total Co-Authors: 454</li>
+            </ul>
+            <div>
+              <img
+                src="./assets/images/citations.png"
+                style={{ maxWidth: 400 }}
+              />
+            </div>
+          </div>
           <h2 style={{ padding: "10px 0px" }}>Published Articles</h2>
           <div
             style={{
@@ -198,9 +219,7 @@ export default function login() {
             <div style={{ fontWeight: "700" }}>h-index</div>
             <div style={{ fontWeight: "700" }}>i10-index</div>
           </div>
-          <ul
-            className="articles"
-            style={{ height: 200, overflowY: "auto" }}>
+          <ul className="articles" style={{ height: 200, overflowY: "auto" }}>
             {[1, 2, 3, 4, 5, 4, 5, 4, 5, 4].map((article) => (
               <li style={{}}>
                 <Link href="/article">
@@ -221,6 +240,7 @@ export default function login() {
               </li>
             ))}
           </ul>
+
           <div style={{ padding: "10px 0" }}>
             <Link href="/view-all">
               <a style={{ color: COLORS.primary2 }}>View All</a>
