@@ -2,11 +2,13 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { COLORS } from "../config/theme";
+import { motion } from "framer-motion";
 
 export default function login() {
   const router = useRouter();
   return (
-    <main
+    <motion.div
+      exit={{ opacity: 0 }}
       style={{
         width: "100vw",
         height: "100vh",
@@ -88,6 +90,6 @@ export default function login() {
           </Link>
         </div>
       </div>
-    </main>
+    </motion.div>
   );
 }
