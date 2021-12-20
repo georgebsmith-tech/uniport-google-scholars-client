@@ -84,6 +84,9 @@ export default function login() {
               </div>
             </div>
             <div style={{ backgroundColor: "#fff", padding: 20 }}>
+              <h2 style={{ marginBottom: 20, fontSize: 20 }}>
+                Latest Publications
+              </h2>
               <div
                 style={{
                   display: "grid",
