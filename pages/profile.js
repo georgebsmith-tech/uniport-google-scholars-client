@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 
 export default function login() {
   const router = useRouter();
+  const [body, setBody] = useState({
+    firstName: "Smith",
+    lastName: "Hostin",
+    phone: "08165676556",
+    email: "email@gmail.com",
+    address: "Diamond Lodge, Alakahia",
+  });
 
   const [edit, setEdit] = useState(false);
 
@@ -89,7 +96,9 @@ export default function login() {
             <div>
               <img src={"./assets/images/avatar.png"} width={70} />
             </div>
-            <h2>John Doe</h2>
+            <h2>
+              {body.firstName} {body.lastName}
+            </h2>
             <h3 style={{ fontWeight: "normal", textAlign: "center" }}>
               Senior Lecturer,Department of Mathematics
             </h3>
@@ -136,11 +145,15 @@ export default function login() {
               gridTemplateColumns: "1fr 2fr",
             }}
           >
-            <Input placeholder="First Name" />
-            <Input placeholder="Last Name" />
-            <Input placeholder="Email" />
-            <Input placeholder="Phone" />
-            <Input placeholder="Address" />
+            <Input
+              placeholder="First Name"
+              value={body.firstName}
+              onChange={(e) => setBody({ ...body, firstName: e.target.value })}
+            />
+            <Input placeholder="Last Name" value={body.lastName} />
+            <Input placeholder="Email" value={body.email} />
+            <Input placeholder="Phone" value="08165334255" value={body.phone} />
+            <Input placeholder="Address" value={body.address} />
             <button
               onClick={() => setEdit(!edit)}
               style={{
