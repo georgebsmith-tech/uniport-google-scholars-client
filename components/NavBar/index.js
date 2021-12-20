@@ -1,8 +1,11 @@
 import React from "react";
 import { COLORS } from "../../config/theme";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function NavBar() {
+  const router = useRouter();
+  console.log();
   return (
     <nav
       style={{
@@ -36,9 +39,17 @@ export default function NavBar() {
               <a
                 className="main-link"
                 style={{
-                  color: "#fff",
+                  color:
+                    router.pathname === "/" + item.toLowerCase()
+                      ? COLORS.primary1
+                      : "#fff",
                   padding: "10px 15px",
-                  backgroundColor: item === "Register" ? "red" : "initial",
+                  backgroundColor:
+                    router.pathname === "/" + item.toLowerCase()
+                      ? "#f4f4f4"
+                      : item === "Register"
+                      ? "red"
+                      : "initial",
                   margin: "0px 15px",
                 }}
               >
