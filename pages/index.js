@@ -13,7 +13,6 @@ export default function login() {
         width: "100vw",
         height: "100vh",
 
-        display: "flex",
         padding: "0px 150px",
         backgroundColor: "#f3f3f3",
       }}
@@ -49,6 +48,7 @@ export default function login() {
             gridTemplateColumns: "2.5fr 1fr",
             gridTemplateRows: 400,
             columnGap: 20,
+            width: "100%",
           }}
         >
           <div>
