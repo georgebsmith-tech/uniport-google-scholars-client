@@ -33,31 +33,31 @@ export default function NavBar() {
           justifyContent: "space-between",
         }}
       >
-        {["Home", "About", "Register", "Login"].map((item) => (
-          <li>
-            <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
-              <a
-                className="main-link"
-                style={{
-                  color:
-                    router.pathname === "/" + item.toLowerCase()
-                      ? COLORS.primary1
-                      : "#fff",
-                  padding: "10px 15px",
-                  backgroundColor:
-                    router.pathname === "/" + item.toLowerCase()
-                      ? "#f4f4f4"
-                      : item === "Register"
-                      ? "red"
-                      : "initial",
-                  margin: "0px 15px",
-                }}
-              >
-                {item}
-              </a>
-            </Link>
-          </li>
-        ))}
+        {["Home", "About", "Register", "Login"].map((item) => {
+          const path = item === "Home" ? "/" : "/" + item.toLowerCase();
+          return (
+            <li>
+              <Link href={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
+                <a
+                  className="main-link"
+                  style={{
+                    color: router.pathname === path ? COLORS.primary1 : "#fff",
+                    padding: "10px 15px",
+                    backgroundColor:
+                      router.pathname === path
+                        ? "#f4f4f4"
+                        : item === "Register"
+                        ? "red"
+                        : "initial",
+                    margin: "0px 15px",
+                  }}
+                >
+                  {item}
+                </a>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
