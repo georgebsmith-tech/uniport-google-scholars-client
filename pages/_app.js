@@ -1,10 +1,14 @@
 import "../styles/globals.css";
 import { AnimatePresence } from "framer-motion";
+import NavBar from "../components/NavBar";
 
 function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter>
-      <Component {...pageProps} />
+      <NavBar />
+      <div style={{ paddingTop: 150 }}>
+        <Component {...pageProps} />
+      </div>
     </AnimatePresence>
   );
 }

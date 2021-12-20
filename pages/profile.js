@@ -190,14 +190,17 @@ export default function login() {
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "1.3fr 0.2fr 0.2fr",
+              gridTemplateColumns: "1.3fr 0.2fr 0.2fr 0.2fr",
             }}
           >
-            <div style={{ fontWeight: "700" }}>Article</div>
-            <div style={{ fontWeight: "700" }}>h5-index</div>
-            <div style={{ fontWeight: "700" }}>h5-median</div>
+            <div style={{ fontWeight: "700" }}>Citations</div>
+            <div style={{ fontWeight: "700" }}>Cited by</div>
+            <div style={{ fontWeight: "700" }}>h-index</div>
+            <div style={{ fontWeight: "700" }}>i10-index</div>
           </div>
-          <ul style={{ height: 200, overflowY: "auto" }}>
+          <ul
+            className="articles"
+            style={{ height: 200, overflowY: "auto" }}>
             {[1, 2, 3, 4, 5, 4, 5, 4, 5, 4].map((article) => (
               <li style={{}}>
                 <Link href="/article">
@@ -206,12 +209,13 @@ export default function login() {
                       color: COLORS.primary2,
                       padding: 5,
                       display: "grid",
-                      gridTemplateColumns: "1.4fr 0.2fr 0.2fr",
+                      gridTemplateColumns: "1.4fr 0.2fr 0.2fr  0.2fr",
                     }}
                   >
                     article
-                    <div>89</div>
-                    <div>34</div>
+                    <div>{Math.round(Math.random() * 10 + 10)}</div>
+                    <div>{Math.round(Math.random() * 100 + 67)}</div>
+                    <div>{Math.round(Math.random() * 20 + 58)}</div>
                   </a>
                 </Link>
               </li>

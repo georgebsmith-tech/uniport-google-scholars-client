@@ -21,6 +21,10 @@ ul {
   list-style-type: none;
 }
 
-li:hover {
+.articles li:hover {
   background-color: aliceblue;
+}
+
+.main-link:hover {
+  background-color: "red";
 }
