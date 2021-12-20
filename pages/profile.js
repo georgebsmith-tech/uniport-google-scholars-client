@@ -106,7 +106,7 @@ export default function login() {
             <h4 style={{ fontWeight: "normal" }}>Published 30 articles</h4>
 
             <button
-              onClick={() => router.push("/login-pass")}
+              onClick={() => router.push("/messages")}
               style={{
                 padding: 10,
                 width: "100%",
