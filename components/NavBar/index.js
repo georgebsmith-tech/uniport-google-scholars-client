@@ -33,7 +33,7 @@ export default function NavBar() {
           justifyContent: "space-between",
         }}
       >
-        {["Home", "About", "Register", "Login"].map((item) => {
+        {["Home", "About", "Register", "Login", "Profile"].map((item) => {
           const path = item === "Home" ? "/" : "/" + item.toLowerCase();
           return (
             <li>

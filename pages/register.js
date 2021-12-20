@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { COLORS } from "../config/theme";
+import { motion } from "framer-motion";
 
 export default function Register() {
   const router = useRouter();
@@ -20,7 +21,17 @@ export default function Register() {
       }}
     >
       <div>
-        <div
+        <motion.div
+          initial={{
+            scale: 0.5,
+          }}
+          animate={{
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+          exit={{ scale: 0 }}
           style={{
             padding: 40,
             backgroundColor: "#fff",
@@ -161,7 +172,7 @@ export default function Register() {
               </span>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div
           style={{ marginTop: 20, display: "flex", justifyContent: "center" }}
         >

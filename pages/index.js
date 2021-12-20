@@ -7,8 +7,7 @@ import { motion } from "framer-motion";
 export default function login() {
   const router = useRouter();
   return (
-    <motion.div
-      exit={{ opacity: 0 }}
+    <div
       style={{
         width: "100vw",
         height: "100vh",
@@ -19,7 +18,17 @@ export default function login() {
       }}
     >
       <div>
-        <div
+        <motion.div
+          initial={{
+            scale: 0.5,
+          }}
+          animate={{
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+          exit={{ scale: 0 }}
           style={{
             padding: 50,
             backgroundColor: "#fff",
@@ -39,7 +48,7 @@ export default function login() {
             <div></div>
           </div>
           <div></div>
-        </div>
+        </motion.div>
         {/* <div style={{ backgroundColor: "#fff", padding: 20 }}>
           <div></div>
         </div> */}
@@ -136,6 +145,6 @@ export default function login() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

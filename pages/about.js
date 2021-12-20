@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { COLORS } from "../config/theme";
+import { motion } from "framer-motion";
 
 export default function login() {
   const router = useRouter();
@@ -17,7 +18,17 @@ export default function login() {
       }}
     >
       <div>
-        <div
+        <motion.div
+          initial={{
+            scale: 0.5,
+          }}
+          animate={{
+            scale: 1,
+            transition: {
+              duration: 1,
+            },
+          }}
+          exit={{ scale: 0 }}
           style={{
             padding: 50,
             backgroundColor: "#fff",
@@ -41,7 +52,7 @@ export default function login() {
             <p>This is the about page</p>
           </div>
           <div></div>
-        </div>
+        </motion.div>
       </div>
     </main>
   );
