@@ -76,7 +76,10 @@ export default function login() {
                   <li>Total Co-Authors: 454</li>
                 </ul>
                 <div>
-                  <img src="./assets/images/citations.png" />
+                  <img
+                    src="./assets/images/citations.png"
+                    style={{ maxWidth: 200 }}
+                  />
                 </div>
               </div>
             </div>
