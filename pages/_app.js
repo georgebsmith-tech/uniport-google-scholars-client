@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AnimatePresence exitBeforeEnter>
       <NavBar />
-      <div style={{ paddingTop: 150 }}>
+      <div style={{ paddingTop: 100 }}>
         <Component {...pageProps} />
       </div>
     </AnimatePresence>

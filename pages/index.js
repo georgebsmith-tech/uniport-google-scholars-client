@@ -15,6 +15,7 @@ export default function login() {
 
         padding: "0px 150px",
         backgroundColor: "#f3f3f3",
+        paddingTop: 100,
       }}
     >
       <div>
