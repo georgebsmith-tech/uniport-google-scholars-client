@@ -49,7 +49,7 @@ export default function login() {
     <div
       style={{
         width: "100vw",
-        height: "100vh",
+        minHeight: "100vh",
 
         display: "flex",
         justifyContent: "center",
